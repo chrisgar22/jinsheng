@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>得昌行|捷獅---管理系統</title>
+   <title>勁聲汽車音響-管理系統</title>
    <link rel="stylesheet" href="css/bootstrap.min.css" />
    <link rel="stylesheet" href="css/mycolor-tegrand.css" />
    <link rel="stylesheet" href="css/all.min.css" />
@@ -16,7 +16,7 @@
       integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous" />
    <!--Bootstrap Icons（圖示庫）-->
    <link rel="stylesheet" href="css/adminlte.css" /> <!--AdminLTE（後台管理模板 CSS）-->
-   <link rel="icon" href="images/MajorProject/捷獅.webp" type="image/png" />
+   <link rel="icon" href="images/jinsheng.jpg" type="image/png" />
    <style>
       /*連結底線顯示none*/
       a {
@@ -287,11 +287,11 @@
       <nav class="navbar navbar-expand-lg">
          <div class="container-fluid">
             <div class="navbar-brand fw-900 d-flex align-items-center">
-               <a href="tegrand_project_v4.html" class="d-flex align-items-center" style="border-radius: 10px">
-                  <img class="navbar-brand-img" src="images/MajorProject/捷獅.webp" alt="得昌行-捷獅" />
-                  <span class="navbar-brand-name ms-1">得昌行</span>
+               <a href="jinsheng_project_v4.html" class="d-flex align-items-center" style="border-radius: 10px">
+                  <img class="navbar-brand-img" src="images/jinsheng.jpg" alt="勁聲汽車音響" />
+                  <span class="navbar-brand-name ms-1">勁聲汽車音響</span>
                </a>
-               <a href="tegrand_controlPanel.html"><span class="h3 text-info ms-1">管理系統</span></a>
+               <a href="jinsheng_controlPanel.html"><span class="h3 text-info ms-1">管理系統</span></a>
             </div>
             <button class="navbar-toggler border border-3 p-2" type="button" data-bs-toggle="collapse"
                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -317,7 +317,7 @@
                   </li>
                   <!-- 機台管理 -->
                   <li class="nav-item ms-1">
-                     <a class="nav-link p-4 nav-link-icon" href="tegrand_controlPanel_item.html" title="機台管理">
+                     <a class="nav-link p-4 nav-link-icon" href="jinsheng_controlPanel_item.html" title="管理">
                         <svg class="bi bi-building-fill-gear nav-small-box-icon" xmlns="http://www.w3.org/2000/svg"
                            fill="currentColor" viewBox="0 0 16 16">
                            <path
@@ -371,7 +371,7 @@
                   </li>
                   <!-- 徵才管理 -->
                   <li class="nav-item ms-1">
-                     <a class="nav-link p-4 nav-link-icon" href="tegrand_controlPanel_apply.html" title="徵才徵才管理">
+                     <a class="nav-link p-4 nav-link-icon" href="jinsheng_controlPanel_apply.html" title="徵才徵才管理">
                         <svg class="bi bi-person-vcard-fill nav-small-box-icon" xmlns="http://www.w3.org/2000/svg"
                            width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                            <path
@@ -393,10 +393,10 @@
       <section id="s03" class="boxbg mb-0">
          <ol class="breadcrumb ms-3 mb-0">
             <li class="breadcrumb-item h4">
-               <a href="tegrand_project_v4.html"><b>首頁</b></a>
+               <a href="jinsheng_project_v4.html"><b>首頁</b></a>
             </li>
             <li class="breadcrumb-item h4">
-               <a href="tegrand_controlPanel.html"><b>管理系統</b></a>
+               <a href="jinsheng_controlPanel.html"><b>管理系統</b></a>
             </li>
             <li class="breadcrumb-item active h4" aria-current="page">
                <b>管理者管理</b>
@@ -411,7 +411,7 @@
                      <div class="col-lg-2 col-6">
                         <!-- small box -->
                         <a class="small-box text-bg-primary text-decoration-none"
-                           href="tegrand_controlPanel_users_V2.html">
+                           href="jinsheng_controlPanel_users_V2.html">
                            <div class="inner">
                               <h3></h3>
                               <h5><b>會員數量</b></h5>
@@ -491,42 +491,6 @@
                            </tr>
                         </thead>
                         <tbody id="mydata">
-                           <!-- <tr>
-                              <td data-th="勾選方框" class="text-center align-middle">
-                                 <input class="form-check-input row-checkbox" type="checkbox" data-id="row-checkbox">
-                              </td>
-                              <td data-th="編號" class="text-center align-middle">1</td>
-                              <td data-th="帳號" class="text-center align-middle">
-                                 admin
-                              </td>
-                              <td data-th="E-mail" class="text-center align-middle">
-                                 admin@test.com
-                              </td>
-                              <td data-th="地址" class="text-center align-middle">
-                                 address123456
-                              </td>
-                              <td data-th="手機" class="text-center align-middle">
-                                 0928654937
-                              </td>
-                              <td data-th="座機" class="text-center align-middle">
-                                 048654937
-                              </td>
-                              <td data-th="傳真電話" class="text-center align-middle">
-                                 48654937
-                              </td>
-                              <td data-th="功能" class="text-center align-middle">
-                                 <button class="btn btn-warning" id="update_btn" data-bs-toggle="modal"
-                                    data-bs-target="#updateModal" data-id="" data-username="" data-email="" data-city="" data-area="" data-address="" data-phone="" data-telephone="" data-fax="">
-                                    更新
-                                 </button>
-                                 <button class="btn btn-danger ms-3" id="delete_btn" data-id="">刪除</button>
-                              </td>
-                           </tr>
-                           <tr>
-                              <th colspan="9" class="text-center">
-                                 <a href="#" style="text-decoration: underline">123456789</a>
-                              </th>
-                           </tr> -->
                         </tbody>
                      </table>
                   </div>
@@ -543,15 +507,6 @@
                      <div class="col-8 d-flex justify-content-center">
                         <nav aria-label="Page navigation example" class="align-self-center">
                            <ul class="pagination m-0" id="mypagination">
-                              <!-- <li class="page-item disabled">
-                                 <a class="page-link">Previous</a>
-                              </li>
-                              <li class="page-item"><a class="page-link" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link" href="#">3</a></li>
-                              <li class="page-item">
-                                 <a class="page-link" href="#">Next</a>
-                              </li> -->
                            </ul>
                         </nav>
                      </div>
@@ -698,7 +653,7 @@
                      <div class="invalid-feedback d-none" id="selectCityError">請選擇縣市</div>
                      <select name="addModal_selectArea" id="addModal_selectArea" class="form-select ms-2">
                         <!-- <option value="" class="text-center" selected disabled>---選擇鄉鎮市區---</option>
-                        <option value="太平區" class="text-center">太平區</option> -->
+                        <option value="西屯區" class="text-center">西屯區</option> -->
                      </select>
                      <div class="invalid-feedback d-none" id="selectAreaError">請選擇鄉鎮市區</div>
                   </div>
@@ -742,11 +697,7 @@
       <div class="container align-items-center">
          <ul class="nav">
             <li class="nav-item">
-               <a class="nav-link disabled" style="color: white">PowerBy 113年雲端技術應用實務班第2期3號陳俞蓁</a>
-            </li>
-            <li class="nav-item">
-               <a href="https://gcis.nat.gov.tw/mainNew/" class="nav-link active" aria-current="page" target="_blank"
-                  style="color: white" rel="noopener noreferrer">全國商工行政服務入口網</a>
+               <a class="nav-link disabled" style="color: white">114年跨平台網站設置與應用班第1期7號趙琦福</a>
             </li>
          </ul>
       </div>
@@ -830,7 +781,7 @@
                      showConfirmButton: false,
                   });
                   setTimeout(function () {
-                     location.href = "tegrand_project_v4.html";
+                     location.href = "jinsheng_project_v4.html";
                   }, 3000);
                } else {
                   // // 如果用戶點擊取消
@@ -875,7 +826,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_project_v4.html";
+                  location.href = "jinsheng_project_v4.html";
                }
             });
          }
@@ -886,7 +837,7 @@
             $("#addModal_selectArea").empty();
 
             // 填充縣市選單
-            $("#addModal_selectCity").append('<option value="" class="text-center" selected disabled>---選擇縣市---</option>');
+            $("#addModal_selectCity").append('<option value="" class="text-center" selected disabled>選擇縣市</option>');
             city.forEach(function (item) {
                $("#addModal_selectCity").append(`<option value="${item.CityName}">${item.CityName}</option>`);
             });
@@ -925,7 +876,7 @@
             $("#selectArea").empty();
 
             // 填充縣市選單
-            $("#selectCity").append('<option value="" class="text-center" selected disabled>---選擇縣市---</option>');
+            $("#selectCity").append('<option value="" class="text-center" selected disabled>選擇縣市</option>');
             city.forEach(function (item) {
                $("#selectCity").append(`<option value="${item.CityName}">${item.CityName}</option>`);
             });
@@ -941,7 +892,7 @@
                   if (item.CityName === selectedCity) {
                      $("#selectArea").empty();
 
-                     $("#selectArea").append('<option value="" class="text-center" selected disabled>---選擇鄉鎮市區---</option>');
+                     $("#selectArea").append('<option value="" class="text-center" selected disabled>選擇鄉鎮市區</option>');
                      item.AreaList.forEach(function (myitem) {
                         console.log(myitem.AreaName);
                         var strHTML = `<option value="${myitem.AreaName}">${myitem.AreaName}</option> -->`;
@@ -980,8 +931,8 @@
             var area = $("#selectArea").val();
             var address = $("#updateModal_address").val().trim();
 
-            var isCityEmpty = !city || city === "---選擇縣市---";
-            var isAreaEmpty = !area || area === "---選擇鄉鎮市區---";
+            var isCityEmpty = !city || city === "選擇縣市";
+            var isAreaEmpty = !area || area === "選擇鄉鎮市區";
             var isAddressEmpty = address === "";
 
             // **如果選擇 city，area 和 address 會被清空，應該強制設定 flag 為 false**
@@ -1112,7 +1063,8 @@
          });
 
          $('#updateModal_cancel_btn').on('click', function () {
-            window.location.href = "tegrand_controlPanel_manager.html";  // 導向原本的頁面
+            window.location.href = 
+            "jinsheng_controlPanel_manager.html";  // 導向原本的頁面
          });
 
          // 即時監聽addModal_username
@@ -1214,8 +1166,8 @@
             var area = $("#addModal_selectArea").val();
             var address = $("#addModal_address").val().trim();
 
-            var isCityEmpty = !city || city === "---選擇縣市---";
-            var isAreaEmpty = !area || area === "---選擇鄉鎮市區---";
+            var isCityEmpty = !city || city === "選擇縣市";
+            var isAreaEmpty = !area || area === "選擇鄉鎮市區";
             var isAddressEmpty = address === "";
 
             // **如果選擇 city，area 和 address 會被清空，應該強制設定 flag 為 false**
@@ -1390,7 +1342,7 @@
 
                if (selectedMembers.length === 0) {
                   Swal.fire({
-                     title: "請選擇至少一個管理員進行刪除",
+                     title: "請選擇管理員進行刪除",
                      icon: "warning"
                   });
                   return;
@@ -1586,7 +1538,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_project_v4.html";
+                  location.href = "jinsheng_project_v4.html";
                }
             });
          }
@@ -1860,7 +1812,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_controlPanel_manager.html";
+                  location.href = "jinsheng_controlPanel_manager.html";
                }
             })
          } else {
@@ -1884,7 +1836,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_controlPanel_manager.html";
+                  location.href = "jinsheng_controlPanel_manager.html";
                }
             })
          } else {
@@ -1910,7 +1862,7 @@
             }).then((result) => {
                $("#addModal_update_btn").prop("disabled", true); // 註冊成功後禁用按鈕
                if (result.isConfirmed) {
-                  location.href = "tegrand_controlPanel_manager.html";
+                  location.href = "jinsheng_controlPanel_manager.html";
                }
             });
          } else {

@@ -716,7 +716,7 @@
             <div class="modal-content">
                <div class="modal-header text-bg-info fw-900">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                     新增機台資料庫
+                     新增資料庫
                   </h1>
                   <div class="col-6 text-danger ms-3">
                      <sup class="s01-sup">*</sup>為必填項目
@@ -726,31 +726,33 @@
                </div>
                <div class="modal-body">
                   <div class="mb-3"> <!-- 圖片 -->
-                     <label for="addModal_photo" class="form-label">機台圖片(格式jpeg或png)</label>
+                     <label for="addModal_photo" class="form-label">圖片(格式jpeg或png)</label>
                      <input class="form-control" type="file" id="addModal_photo" name="addModal_photo"
                         placeholder="圖片格式jpeg或png">
                      <div class="valid-feedback">圖片格式正確</div>
-                     <div class="invalid-feedback">圖片格式不正確，請選擇jpeg或png檔!</div>
+                     <div class="invalid-feedback">圖片格式不正確，請選擇jpeg或png檔！</div>
                      <img id="addModel_img" src="" class="text-center d-none"
                         style="max-height: 400px; max-width: 300px; width: auto; height: auto;" alt="機台圖片">
                   </div>
                   <div class="mb-3 d-flex align-items-center"> <!-- 種類 -->
-                     <label for="addModal_category" class="form-label mb-0 me-2" style="white-space: nowrap;">機台種類<sup
+                     <label for="addModal_category" class="form-label mb-0 me-2" style="white-space: nowrap;">種類<sup
                            class="s01-sup text-danger">*</sup></label>
                      <select class="form-select is-invalid" id="addModal_category" style="height: auto;">
-                        <option selected disabled>--- 選擇機台種類 ---</option>
-                        <option value="1">車床</option>
-                        <option value="2">銑床</option>
-                        <option value="3">鑽床</option>
-                        <option value="4">磨床</option>
-                        <option value="5">鋸床</option>
-                        <option value="6">放電加工機</option>
-                        <option value="7">沖床</option>
-                        <option value="8">鉋床</option>
-                        <option value="9">其他中古機械</option>
-                        <option value="10">新機代理</option>
+                        <option selected disabled>選擇種類</option>
+                        <option value="1">安桌機</option>
+                        <option value="2">環景</option>
+                        <option value="3">喇叭</option>
+                        <option value="4">隔音制振</option>
+                        <option value="5">盲點偵測</option>
+                        <option value="6">氣氛燈</option>
+                        <option value="7">測速器</option>
+                        <option value="8">電動尾門</option>
+                        <option value="9">防護罩</option>
+                        <option value="10">電子後視鏡</option>
+                        <option value="11">重低音</option>
+                        <option value="12">DSP音場處理器</option>
                      </select>
-                     <div class="invalid-feedback" id="addModal_category_invalid_feedback">請選擇機台種類</div>
+                     <div class="invalid-feedback" id="addModal_category_invalid_feedback">請選擇種類</div>
                   </div>
                   <div class="mb-3 d-flex align-items-center"> <!-- 廠牌 -->
                      <label for="addModal_brand" class="form-label mb-0 me-5" style="white-space: nowrap;">廠牌</label>
@@ -759,7 +761,7 @@
                      <div class="invalid-feedback" id="addModal_brand_invalid_feedback">不符合規則</div>
                   </div>
                   <div class="mb-3 d-flex align-items-center"> <!-- 機台名稱 -->
-                     <label for="addModal_name" class="form-label mb-0 me-3" style="white-space: nowrap;">機台名稱</label>
+                     <label for="addModal_name" class="form-label mb-0 me-3" style="white-space: nowrap;">名稱</label>
                      <input type="text" class="form-control" placeholder="請輸入機台名稱(2-20字數)" id="addModal_name"
                         name="addModal_name" style="height: auto;">
                      <div class="invalid-feedback" id="addModal_name_invalid_feedback">不符合規則</div>
@@ -773,7 +775,7 @@
                   <div class="mb-3 d-flex align-items-center"> <!-- 製造年份 -->
                      <label for="addModal_age" class="form-label mb-0 me-3" style="white-space: nowrap;">製造年份</label>
                      <select id="addModal_age" class="form-select" v-model="yearSelect">
-                        <option value="" selected disabled>--- 選擇製造年份 ---</option>
+                        <option value="" selected disabled>選擇製造年份</option>
                         <option v-for="year in yearOptions" :key="year" :value="year">
                            {{ year }}
                         </option>
@@ -786,7 +788,7 @@
                         id="addModal_price" name="addModal_price" style="height: auto;">
                      <div class="valid-feedback" id="addModal_price_valid_feedback" style="display: none;">價格格式正確</div>
                      <div class="invalid-feedback" id="addModal_price_invalid_feedback" style="display: none;">
-                        價格格式不正確，請輸入有效的數字</div>
+                        價格格式不正確，請輸入有效的數字！</div>
                      <div class="invalid-feedback" id="addModal_price_empty_feedback" style="display: block;">未輸入價格
                      </div>
                   </div>
@@ -794,27 +796,27 @@
                      <label for="addModal_condition" class="form-label mb-0 me-2" style="white-space: nowrap;">上架狀態<sup
                            class="s01-sup text-danger">*</sup></label>
                      <select class="form-select is-invalid" id="addModal_condition" style="height: auto;">
-                        <option selected disabled>--- 選擇上架狀態 ---</option>
+                        <option selected disabled>選擇上架狀態</option>
                         <option value="1">未上架</option>
                         <option value="2">上架</option>
                      </select>
                      <div class="invalid-feedback" id="addModal_condition_invalid_feedback">請選擇上架狀態</div>
                   </div>
                   <div class="mb-3 d-flex align-items-center"> <!-- 機台狀態 -->
-                     <label for="addModal_status" class="form-label mb-0 me-2" style="white-space: nowrap;">機台狀態<sup
+                     <label for="addModal_status" class="form-label mb-0 me-2" style="white-space: nowrap;">狀態<sup
                            class="s01-sup text-danger">*</sup></label>
                      <select class="form-select is-invalid" id="addModal_status" style="height: auto;">
-                        <option selected disabled>--- 選擇機台狀態 ---</option>
+                        <option selected disabled>選擇狀態</option>
                         <option value="0">與賣家洽談中</option>
                         <option value="1">已向賣家報價</option>
-                        <option value="2">機台整修中</option>
-                        <option value="3">機台運送中</option>
+                        <option value="2">整修中</option>
+                        <option value="3">運送中</option>
                         <option value="4">理貨入庫中</option>
                         <option value="5">理貨完成入庫</option>
                         <option value="6">在售(上架)</option>
                         <option value="7">已售出</option>
                      </select>
-                     <div class="invalid-feedback" id="addModal_status_invalid_feedback">請選擇機台狀態</div>
+                     <div class="invalid-feedback" id="addModal_status_invalid_feedback">請選擇狀態</div>
                   </div>
                   <div class="mb-3 d-flex align-items-center"> <!-- 規格描述 -->
                      <label for="addModal_description" class="form-label mb-0 me-3"
@@ -843,7 +845,7 @@
                      取消
                   </button>
                   <button type="button" class="btn btn-primary" id="addModal_update_btn">
-                     確認新增機台資料
+                     確認新增資料
                   </button>
                </div>
             </div>
@@ -856,11 +858,8 @@
       <div class="container align-items-center">
          <ul class="nav">
             <li class="nav-item">
-               <a class="nav-link disabled" style="color: white;">PowerBy 113年雲端技術應用實務班第2期3號陳俞蓁</a>
+               <a class="nav-link disabled" style="color: white;">114年跨平台網站設置與應用班第1期7號趙琦福</a>
             </li>
-            <li class="nav-item">
-               <a href="https://gcis.nat.gov.tw/mainNew/" class="nav-link active" aria-current="page" target="_blank"
-                  style="color: white;" rel="noopener noreferrer">全國商工行政服務入口網</a>
             </li>
          </ul>
       </div>
@@ -943,7 +942,7 @@
                      showConfirmButton: false
                   });
                   setTimeout(function () {
-                     location.href = "tegrand_project_v4.html";
+                     location.href = "jinsheng_project_v4.html";
                   }, 3000);
                } else {
                   // // 如果用戶點擊取消
@@ -967,13 +966,14 @@
             $.ajax({
                type: "POST",
                url: "http://localhost/web202411/tegrand_member_control_api_v2.php?action=checkuid",
+               //選取遠端
                data: JSON.stringify(JSONdata),
                dataType: "json",
                success: showdata_checkuid,
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_member_control_api_v1.php?action=checkuid",
+                     text: "jinsheng_member_control_api_v2.php",
                      icon: "error"
                   });
                }
@@ -989,7 +989,7 @@
             }).then((result) => {
                /* Read more about isConfirmed, isDenied below */
                if (result.isConfirmed) {
-                  location.href = "tegrand_project_v4.html";
+                  location.href = "jinsheng_project_v4.html";
                }
             });
          }
@@ -1246,6 +1246,7 @@
                $.ajax({
                   type: "POST",
                   url: "http://localhost/web202411/tegrand_item_control_api.php?action=add",
+                  //選取遠端
                   data: formData,
                   processData: false,
                   contentType: false,
@@ -1311,13 +1312,14 @@
             $.ajax({
                type: "GET",
                url: "http://localhost/web202411/tegrand_item_control_api.php?action=getalldata",
+               //選取遠端
                dataType: "json",
                success: showdata_getallitemcounts,
                async: false,
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_item_control_api.php?action=getalldata",
+                     text: "jinsheng_apply_control_api.php?action=getalldata",
                      icon: "error"
                   });
                }
@@ -1332,7 +1334,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_project_v4.html";
+                  location.href = "jinsheng_project_v4.html";
                }
             });
          }
@@ -1448,10 +1450,10 @@
                flag_updateModal_type = flag_updateModal_type ?? false;
 
                //收集錯誤訊息
-               if (!flag_updateModal_photo_re) errors.push("更新機台圖片錯誤");
-               if (!flag_updateModal_brand) errors.push("機台廠牌錯誤");
-               if (!flag_updateModal_name) errors.push("機台名稱錯誤");
-               if (!flag_updateModal_type) errors.push("機台型號錯誤");
+               if (!flag_updateModal_photo_re) errors.push("更新圖片錯誤");
+               if (!flag_updateModal_brand) errors.push("廠牌錯誤");
+               if (!flag_updateModal_name) errors.push("名稱錯誤");
+               if (!flag_updateModal_type) errors.push("型號錯誤");
 
                // 如果有錯誤，顯示 Swal.fire 並停止執行
                if (errors.length > 0) {
@@ -1506,6 +1508,7 @@
                $.ajax({
                   type: "POST",
                   url: "http://localhost/web202411/tegrand_item_control_api.php?action=update",
+                  //選取遠端
                   data: formData,
                   processData: false,
                   contentType: false,
@@ -1534,14 +1537,14 @@
 
             if (selectedItems.length === 0) {
                Swal.fire({
-                  title: "請選擇至少一筆資料進行刪除",
+                  title: "請選擇資料進行刪除",
                   icon: "warning"
                });
                return;
             }
 
             Swal.fire({
-               title: "確認刪除選中的機台資訊?",
+               title: "確認刪除選中的資訊?",
                showDenyButton: true,
                showCancelButton: false,
                confirmButtonText: "確認",
@@ -1557,6 +1560,7 @@
                   $.ajax({
                      type: "DELETE",
                      url: "http://localhost/web202411/tegrand_item_control_api.php?action=delete_selected",
+                     //選取遠端
                      data: JSON.stringify(JSONdata),
                      dataType: "json",
                      success: showdata_delete,
@@ -1589,7 +1593,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_controlPanel_item.html";
+                  location.href = "jinsheng_controlPanel_item.html";
                }
             })
          } else {
@@ -1613,7 +1617,7 @@
                allowOutsideClick: false
             }).then((result) => {
                if (result.isConfirmed) {
-                  location.href = "tegrand_controlPanel_item.html";
+                  location.href = "jinsheng_controlPanel_item.html";
                }
             })
          } else {
@@ -1637,7 +1641,7 @@
                // 只在使用者點擊確認後刷新頁面
                if (result.isConfirmed) {
                   // location.href = "tegrand_controlPanel_item.html";
-                  window.location.assign("tegrand_controlPanel_item.html");
+                  window.location.assign("jinsheng_controlPanel_item.html");
                }
             });
          } else {
@@ -1714,6 +1718,7 @@
       function fetchUserData(page) {
          $.ajax({
             url: "http://localhost/web202411/tegrand_item_control_api.php?action=getalldata",
+            //選取遠端
             type: "GET",
             data: { page: page },
             dataType: "json",
@@ -1767,23 +1772,6 @@
 
 
 
-
-      // //全選與單選checkbox
-      // $(document).ready(function () {
-      //    //綁定全選checkbox
-      //    $(document).on("change", ".checkbox-all", function () {
-      //       $(".row-checkbox").prop("checked", this.checked); // 設定所有 checkbox 狀態
-      //       $("#update_btn").prop("disabled", true); //更新button失效
-      //    });
-
-      //    //監聽tbody內的checkbox
-      //    $(document).on("change", ".row-checkbox", function () {
-      //       $(".checkbox-all").prop(
-      //          "checked",
-      //          $(".row-checkbox").length === $(".row-checkbox:checked").length
-      //       );
-      //    });
-      // });
 
       document.addEventListener("DOMContentLoaded", function () {
          let username = sessionStorage.getItem("username"); // 取得用戶名稱

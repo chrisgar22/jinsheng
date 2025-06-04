@@ -976,7 +976,7 @@
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_member_control_api_v1.php?action=checkuid",
+                     text: "jinsheng_member_control_api_v2.php?action=checkuid",
                      icon: "error"
                   });
                }
@@ -1322,7 +1322,7 @@
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_item_control_api.php?action=getalldata",
+                     text: "jinsheng_item_control_api.php?action=getalldata",
                      icon: "error"
                   });
                }
@@ -1643,7 +1643,7 @@
                $("#addModal_update_btn").prop("disabled", true); // 註冊成功後禁用按鈕
                // 只在使用者點擊確認後刷新頁面
                if (result.isConfirmed) {
-                  // location.href = "tegrand_controlPanel_item.html";
+                  // location.href = "jinsheng_controlPanel_item.html";
                   window.location.assign("jinsheng_controlPanel_item.html");
                }
             });

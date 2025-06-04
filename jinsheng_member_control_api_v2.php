@@ -14,7 +14,7 @@
    const DB_SERVER   = "localhost";
    const DB_USERNAME = "owner01";
    const DB_PASSWORD = "123456";
-   const DB_NAME     = "tegrand";
+   const DB_NAME     = "jinsheng";
 
    //建立連線
    function create_connection()

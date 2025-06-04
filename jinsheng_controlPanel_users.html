@@ -292,7 +292,7 @@
                   <img class="navbar-brand-img" src="images/jinsheng.jpg" alt="勁聲汽車音響" />
                   <span class="navbar-brand-name ms-1">勁聲汽車音響</span>
                </a>
-               <a href="tegrand_controlPanel.html"><span class="h3 text-info ms-1">管理系統</span></a>
+               <a href="jinsheng_controlPanel.html"><span class="h3 text-info ms-1">管理系統</span></a>
             </div>
             <button class="navbar-toggler border border-3 p-2" type="button" data-bs-toggle="collapse"
                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -867,7 +867,7 @@
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_member_control_api_v1.php?action=checkuid",
+                     text: "jinsheng_member_control_api_v2.php?action=checkuid",
                      icon: "error"
                   });
                }
@@ -1221,7 +1221,7 @@
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_member_control_api_v1.php?action=getalldata",
+                     text: "jinsheng_member_control_api_v2.php?action=getalldata",
                      icon: "error"
                   });
                }
@@ -1235,7 +1235,7 @@
                error: function () {
                   Swal.fire({
                      title: "API介接錯誤!",
-                     text: "tegrand_member_control_api_v1.php?action=getallrolecounts",
+                     text: "jinsheng_member_control_api_v2.php?action=getallrolecounts",
                      icon: "error"
                   });
                }
@@ -1486,12 +1486,12 @@
 
             // 監聽addModal的Cancel按鈕
             $('#addModal_cancel_btn').on('click', function () {
-               window.location.href = "tegrand_controlPanel_users.html";  // 導向原本的頁面
+               window.location.href = "jinsheng_controlPanel_users.html";  // 導向原本的頁面
             });
 
             // 監聽addModal的Close按鈕
             $('#addModal_close_btn').on('click', function () {
-               window.location.href = "tegrand_controlPanel_users.html";  // 導向原本的頁面
+               window.location.href = "jinsheng_controlPanel_users.html";  // 導向原本的頁面
             });
          } else {
             Swal.fire({
@@ -1560,7 +1560,7 @@
          </div>`;
          var managerHTML = `
          <div class="col-lg-2 col-6">
-            <a class="small-box text-bg-success text-decoration-none" href="tegrand_controlPanel_manager.html">
+            <a class="small-box text-bg-success text-decoration-none" href="jinsheng_controlPanel_manager.html">
                 <div class="inner">
                     <h3>${managerCount}</h3>
                     <h5><b>管理員數量</b></h5>

@@ -1291,7 +1291,7 @@
                <ul class="navbar-nav w-100 d-flex justify-content-around mb-2 mb-lg-0">
                   <!-- 首頁 -->
                   <li class="nav-item active ms-1">
-                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="tegrand_project_v4.html"
+                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="jinsheng_project_v4.html"
                         title="首頁">
                         <i class="s02-icon fa-solid fa-house fa-2xl"></i>
                         <span class="s02-icon-span nav-link-span">
@@ -2700,7 +2700,7 @@
                      showConfirmButton: false
                   });
                   setTimeout(function () {
-                     location.href = "tegrand_project_v4.html";
+                     location.href = "jinsheng_project_v4.html";
                   }, 3000);
                } else {
                   // // 如果用戶點擊取消
@@ -2715,22 +2715,22 @@
 
          // 監聽 Register Modal 的 Cancel 按鈕
          $('#cancel_btn_reg').on('click', function () {
-            window.location.href = "tegrand_project_v4.html";  // 導向原本的頁面
+            window.location.href = "jinsheng_project_v4.html";  // 導向原本的頁面
          });
 
          // 監聽 Register Modal 的 Close 按鈕
          $('#close_btn_reg').on('click', function () {
-            window.location.href = "tegrand_project_v4.html";  // 導向原本的頁面
+            window.location.href = "jinsheng_project_v4.html";  // 導向原本的頁面
          });
 
          // 監聽 Login Modal 的 Cancel 按鈕
          $('#cancel_btn_login').on('click', function () {
-            window.location.href = "tegrand_project_v4.html";  // 導向原本的頁面
+            window.location.href = "jinsheng_project_v4.html";  // 導向原本的頁面
          });
 
          // 監聽 Login Modal 的 Close 按鈕
          $('#close_btn_login').on('click', function () {
-            window.location.href = "tegrand_project_v4.html";  // 導向原本的頁面
+            window.location.href = "jinsheng_project_v4.html";  // 導向原本的頁面
          });
 
          window.onload = function () {
@@ -2756,13 +2756,13 @@
             $('#registerModal').modal('hide');
             // 保存狀態到 sessionStorage
             sessionStorage.setItem('openLoginModal', 'true');
-            window.location.href = 'tegrand_project_v4.html';
+            window.location.href = 'jinsheng_project_v4.html';
          });
          document.getElementById('s01_reg_btn_2').addEventListener('click', function () {
             $('#loginModal').modal('hide');
             // 保存狀態到 sessionStorage
             sessionStorage.setItem('openRegisterModal', 'true');
-            window.location.href = 'tegrand_project_v4.html';
+            window.location.href = 'jinsheng_project_v4.html';
          });
 
          //確認uid01是否存在
@@ -2811,7 +2811,7 @@
             }).then((result) => {
                $("#ok_btn_reg").prop("disabled", true); // 註冊成功後禁用按鈕
                if (result.isConfirmed) {
-                  location.href = "tegrand_project_v4.html";
+                  location.href = "jinsheng_project_v4.html";
                }
             });
          } else {

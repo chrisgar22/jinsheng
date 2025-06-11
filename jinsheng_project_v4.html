@@ -904,7 +904,7 @@
 
       /* s11 */
       .glow-button {
-         background-color: #dc3545;
+         background-color: #35a7dc;
          color: white;
          font-size: 1.5rem;
          padding: 10px 20px;
@@ -919,30 +919,24 @@
       .glow-button::before {
          content: "";
          position: absolute;
-         top: -50%;
-         left: -50%;
-         width: 200%;
-         height: 200%;
-         background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(255, 0, 0, 0) 50%);
-         transform: rotate(0deg);
-         animation: glow 3s linear infinite;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 100%);
+         animation: shine 2s infinite;
       }
 
-      @keyframes glow {
+      @keyframes shine {
          0% {
-            transform: rotate(0deg);
-            opacity: 0.7;
-         }
-
-         50% {
-            opacity: 1;
+            left: -100%;
          }
 
          100% {
-            transform: rotate(360deg);
-            opacity: 0.7;
+            left: 100%;
          }
       }
+
 
       .glow-button:hover {
          box-shadow: 0 0 20px rgba(255, 50, 50, 0.5);
@@ -1267,17 +1261,6 @@
                         <input type="tel" class="form-control" placeholder="填入數字，不含符號" id="phone_reg" name="phone_reg">
                         <div class="invalid-feedback">手機號碼格式不正確</div>
                      </div>
-                     <div class="mb-2">
-                        <label for="telephone_reg" class="form-label mb-2">座機號碼</label>
-                        <input type="tel" class="form-control" placeholder="填入數字，不含符號" id="telephone_reg"
-                           name="telephone_reg">
-                        <div class="invalid-feedback">座機號碼格式不正確</div>
-                     </div>
-                     <div class="mb-2">
-                        <label for="fax_reg" class="form-label mb-2">傳真電話號碼</label>
-                        <input type="tel" class="form-control" placeholder="填入數字，不含符號" id="fax_reg" name="fax_reg">
-                        <div class="invalid-feedback">傳真電話號碼格式不正確</div>
-                     </div>
                   </div>
                </div>
             </div>
@@ -1380,44 +1363,49 @@
                      <ul class="dropdown-menu">
                         <li>
                            <a class="dropdown-item" href="#s06_1">
-                              <i class="s02-icon-dropdown fa-solid fa-gears" title="汽車音響影音多媒體"></i>
+                              <i class="s02-icon-dropdown fa-solid fa-music" title="影音多媒體"></i>
                               <span class="s02-icon-dropdown-span">
-                                 <b>汽車音響影音多媒體</b>
+                                 <b>影音多媒體</b>
                               </span>
                            </a>
                         </li>
                         <li>
                            <a class="dropdown-item" href="#s06_2">
-                              <i class="s02-icon-dropdown fa-solid fa-wrench" title="車身隔音制震"></i>
+                              <i class="s02-icon-dropdown fa-solid fa-video" title="3D 360環景系統"></i>
                               <span class="s02-icon-dropdown-span">
-                                 <b>車身隔音制震</b>
+                                 <b>3D 360環景系統</b>
                               </span>
                            </a>
                         </li>
                         <li>
-                           <hr class="dropdown-divider">
-                        </li>
-                        <li>
                            <a class="dropdown-item" href="#s06">
-                              <i class="s02-icon-dropdown fa-solid fa-people-arrows" title="車門隔音制震"></i>
+                              <i class="s02-icon-dropdown fa-solid fa-truck-monster" title="隔音制震"></i>
                               <span class="s02-icon-dropdown-span">
-                                 <b>車門隔音制震</b>
+                                 <b>隔音制震</b>
                               </span>
                            </a>
                         </li>
                         <li>
                            <a class="dropdown-item" href="#s08">
-                              <i class="s02-icon-dropdown fa-solid fa-screwdriver-wrench" title="輪供隔音制震"></i>
+                              <i class="s02-icon-dropdown fa-solid fa-car-side" title="盲點偵測"></i>
                               <span class="s02-icon-dropdown-span">
-                                 <b>輪供隔音制震</b>
+                                 <b>盲點偵測</b>
                               </span>
                            </a>
                         </li>
                         <li>
                            <a class="dropdown-item" href="#s09">
-                              <i class="s02-icon-dropdown fa-solid fa-user-gear" title="車體隔音制震"></i>
+                              <i class="s02-icon-dropdown fa-solid fa-camera" title="行車記錄器"></i>
                               <span class="s02-icon-dropdown-span">
-                                 <b>車體隔音制震</b>
+                                 <b>行車記錄器</b>
+                              </span>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#s09">
+                              <i class="s02-icon-dropdown fa-solid fa-gauge-high" title="測速器"></i>
+                              <span class="s02-icon-dropdown-span">
+                                 <b>測速器</b>
                               </span>
                            </a>
                         </li>
@@ -1558,7 +1546,9 @@
                         <div class="row d-flex justify-content-evenly align-items-center">
                            <div
                               class="col-6 s04engineer01 d-flex flex-column justify-content-center align-items-center">
-                              <div class="fw-900 counter01"><span>從業時間</span><p>30餘年</Ｐ></div>
+                              <div class="fw-900 counter01"><span>從業時間</span>
+                                 <p>30餘年</Ｐ>
+                              </div>
                            </div>
                            <div
                               class="col-6 s04engineer02 d-flex flex-column justify-content-center align-items-center">
@@ -1567,7 +1557,7 @@
                         </div>
                      </div>
                   </div>
-                  
+
                </div>
             </div>
          </div>
@@ -1579,9 +1569,9 @@
       <div class="container-fluid p-2">
          <div class="card04 s05card">
             <div class="display-4 fw-900 text-center mt-3 wow animate__heartBeat" style="color: var(--myjumpcolor01);"
-               data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="infinite"><i
-                  class="fa-solid fa-fire ms-3" style="color: rgba(255, 255, 0, 0.514)"></i><span
-                  class="ms-3">最新消息</span><i class="fa-solid fa-fire ms-3" style="color: rgba(255, 255, 0, 0.514)"></i>
+               data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="infinite"><i class="fa-solid fa-fire ms-3"
+                  style="color: rgba(255, 255, 0, 0.514)"></i><span class="ms-3">最新消息</span><i
+                  class="fa-solid fa-fire ms-3" style="color: rgba(255, 255, 0, 0.514)"></i>
             </div>
             <div id="marquee" class="text-danger fw-900 mt-3" style="background-color: white;"></div>
          </div>
@@ -1651,7 +1641,7 @@
                <div id="s06_2" class="col-12 col-xl-6">
                   <div class="card06">
                      <img src="images/jinsheng15.jpg" alt="">
-                     <h3 class="text-center mt-2 fw-900">隔音制振、客製化服務</h3>
+                     <h3 class="text-center mt-2 fw-900">影音多媒體安裝、客製化服務</h3>
                      <hr>
                      <div class="card06-content text-center fw-700">
                         <div class="mt-3">
@@ -1662,22 +1652,16 @@
                         </div>
                         <div class="mt-3">
                            <a class="s06-a" href="#s09">頂篷隔音制振</a>
-                        <div class="mt-3">
-                           <a class="s06-a" href="#s09">底盤隔音制震</a>
-                        <div class="mt-3">
-                           <a class="s06-a" href="#s09">車門氣密隔音條</a>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      </div>
    </section>
 
    <!-- section07 影音安裝 -->
-      <section id="s07" class="bg-cover box06bg">
+   <section id="s07" class="bg-cover box06bg">
       <div class="row flex-row-reverse">
          <div class="col-md-3 d-none d-md-block bottom-0 top-0 bg-cover" style="background-image: url(images/MajorProject/DALL·E\ 2025-01-09\ 16.16.40\ -\ A\ detailed\ industrial\ workshop\ featuring\ a\ lathe\ machine\,\ a\ punch\ press\,\ a\ grinding\ machine\,\ and\ a\ drilling\ machine.\ Each\ machine\ is\ accurately\ depict.webp);mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
                            -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
@@ -1761,8 +1745,7 @@
                <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
-                        <div class="flip-card-front bg-cover"
-                           style="background-image: url(images/buy01.jpg);">
+                        <div class="flip-card-front bg-cover" style="background-image: url(images/buy01.jpg);">
                            <div class="s08q">
                               <h3>需求諮詢</h3>
                            </div>
@@ -1786,8 +1769,7 @@
                <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
-                        <div class="flip-card-front bg-cover"
-                           style="background-image: url(images/buy02.jpg);">
+                        <div class="flip-card-front bg-cover" style="background-image: url(images/buy02.jpg);">
                            <div class="s08q">
                               <h3>產品選購</h3>
                            </div>
@@ -1811,8 +1793,7 @@
                <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
-                        <div class="flip-card-front bg-cover"
-                           style="background-image: url(images/buy03.jpg);">
+                        <div class="flip-card-front bg-cover" style="background-image: url(images/buy03.jpg);">
                            <div class="s08q">
                               <h3>專業安裝</h3>
                            </div>
@@ -1836,8 +1817,7 @@
                <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
-                        <div class="flip-card-front bg-cover"
-                           style="background-image: url(images/buy04.jpg);">
+                        <div class="flip-card-front bg-cover" style="background-image: url(images/buy04.jpg);">
                            <div class="s08q">
                               <h3>驗收教學</h3>
                            </div>
@@ -1943,13 +1923,16 @@
          <div class="s10-container p-5">
             <div class="row">
                <div class="col-md-5">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.357767022181!2d120.62133227635805!3d24.19424647159031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469160ba6b4d5cf%3A0xd4438ded67ec8059!2z5YuB6IGy5rG96LuK6Z-z6Z-_44CB5b2x6Z-z56eR5oqA!5e0!3m2!1szh-TW!2stw!4v1747814185371!5m2!1szh-TW!2stw" width="680" height="710" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="勁聲汽車音響地址"></iframe>
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.357767022181!2d120.62133227635805!3d24.19424647159031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469160ba6b4d5cf%3A0xd4438ded67ec8059!2z5YuB6IGy5rG96LuK6Z-z6Z-_44CB5b2x6Z-z56eR5oqA!5e0!3m2!1szh-TW!2stw!4v1747814185371!5m2!1szh-TW!2stw"
+                     width="680" height="710" style="border:0;" allowfullscreen="" loading="lazy"
+                     referrerpolicy="no-referrer-when-downgrade" title="勁聲汽車音響地址"></iframe>
                </div>
                <div class="col-md-7">
                   <div class="card card-secondary card-outline s10-container">
                      <div class="card-header text-center">
                         <div class="card-title">
-                           <span class="display-4 fw-900" style="color: var(--myjumpcolor01);">
+                           <span class="display-5 fw-900" style="color: var(--myjumpcolor06);">
                               <b>聯絡勁聲汽車音響、影音科技</b>
                            </span>
                         </div>
@@ -2127,8 +2110,8 @@
                <a class="nav-link disabled" style="color: white;">114年跨平台網站設置與應用班第1期7號趙琦福</a>
             </li>
             <li class="nav-item">
-               <a href="https://tw.bid.yahoo.com/search/auction/product?p=%E5%8B%81%E8%81%B2" class="nav-link active" aria-current="page" target="_blank"
-                  style="color: white" rel="noopener noreferrer">雅虎奇摩-勁聲汽車音響</a>
+               <a href="https://tw.bid.yahoo.com/search/auction/product?p=%E5%8B%81%E8%81%B2" class="nav-link active"
+                  aria-current="page" target="_blank" style="color: white" rel="noopener noreferrer">雅虎奇摩-勁聲汽車音響</a>
             </li>
          </ul>
       </div>
@@ -2234,11 +2217,26 @@
       const marquee = document.getElementById('marquee');
       const text = document.createElement('span');
       text.textContent = '出國進修期間(7月20日~7月24日)暫停服務!';
+
+      // 七彩漸層文字設定
+      text.style.position = 'absolute';
+      text.style.whiteSpace = 'nowrap';
+      text.style.fontSize = '48px';
+      text.style.fontWeight = 'bold';
+      text.style.backgroundImage = 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+      text.style.backgroundSize = '500% 100%'; // 更長的漸層，利於動畫
+      text.style.backgroundPosition = '0% 50%';
+      text.style.webkitBackgroundClip = 'text';
+      text.style.backgroundClip = 'text';
+      text.style.color = 'transparent';
+      text.style.animation = 'rainbowShift 4s linear infinite';
+
       marquee.appendChild(text);
 
+      // 跑馬燈邏輯
       let pos = marquee.offsetWidth;
       function scroll() {
-         pos -= 3; // 調整移動速度
+         pos -= 2; // 控制速度
          if (pos < -text.offsetWidth) {
             pos = marquee.offsetWidth;
          }
@@ -2246,6 +2244,8 @@
          requestAnimationFrame(scroll);
       }
       scroll();
+
+
 
       // s09
       const steps = document.querySelectorAll('.step1, .step2, .step3, .step4');

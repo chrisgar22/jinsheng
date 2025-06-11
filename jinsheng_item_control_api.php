@@ -59,7 +59,7 @@
                return;
             }
          } else {
-            respond(false, "檔案必須為 jpeg 或 png!");
+            respond(false, "檔案必須為 jpeg 或 png！");
             return;
          }
       }
@@ -97,9 +97,9 @@
             $stmt->bind_param("sssssssssssss", $p_photo, $p_category, $p_brand, $p_name, $p_type, $p_price, $p_condition, $p_status, $p_description, $p_remark, $p_age, $p_seller, $p_buyer);
 
             if ($stmt->execute()) {
-               respond(true, "新增機台成功", ["image_path" => $p_photo]);
+               respond(true, "新增成功", ["image_path" => $p_photo]);
             } else {
-               respond(false, "新增機台失敗");
+               respond(false, "新增失敗");
             }
 
             $stmt->close();

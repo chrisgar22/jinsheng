@@ -67,9 +67,9 @@
             $stmt->bind_param("ssssssss", $p_name, $p_phone, $p_email, $p_education, $p_experience, $p_skill, $p_position, $p_reply);
 
             if ($stmt->execute()) {
-               respond(true, "求職簡歷已送出<br><span class='text-primary small'>得昌行將儘速與您聯繫!</span>");
+               respond(true, "求職履歷已送出<br><span class='text-primary small'>勁聲汽車音響將儘速與您聯繫!</span>");
             } else {
-               respond(false, "求職簡歷送出失敗");
+               respond(false, "求職履歷送出失敗");
             }
             $stmt->close();
             $conn->close();
@@ -166,9 +166,9 @@
 
             if ($stmt->execute()) {
                if ($stmt->affected_rows > 0) {
-                  respond(true, "選中的簡歷已成功刪除");
+                  respond(true, "選中的履歷已成功刪除");
                } else {
-                  respond(false, "沒有任何簡歷被刪除");
+                  respond(false, "沒有任何履歷被刪除");
                }
             } else {
                respond(false, "刪除操作失敗");
@@ -176,7 +176,7 @@
             $stmt->close();
             $conn->close();
          } else {
-            respond(false, "沒有選擇簡歷進行刪除");
+            respond(false, "沒有選擇履歷進行刪除");
          }
       } else {
          respond(false, "欄位錯誤");
@@ -226,7 +226,7 @@
       $total_reply_7_pages = ceil($reply_7_count / $limit);
       
 
-      // 取得所有應徵回復情形簡歷(不分頁)
+      // 取得所有應徵回復情形履歷(不分頁)
       $stmt = $conn->prepare("SELECT * FROM apply ORDER BY apply_id DESC");
       $stmt->execute();
       $result = $stmt->get_result();
@@ -238,7 +238,7 @@
          $reply_allpage_data[] = $row;
       }
 
-      // 取得所有應徵回復情形簡歷(分頁)
+      // 取得所有應徵回復情形履歷(分頁)
       $stmt = $conn->prepare("SELECT * FROM apply ORDER BY apply_id DESC LIMIT ? OFFSET ?");
       $stmt->bind_param("ii", $limit, $offset);
       $stmt->execute();
@@ -260,7 +260,7 @@
       $reply_6_data = [];
       $reply_7_data = [];
       
-      // 取得應徵回復情形簡歷(分類)(分頁)
+      // 取得應徵回復情形履歷(分類)(分頁)
       for ($i = 1; $i <= 7; $i++) {
          $stmt = $conn->prepare("SELECT * FROM apply WHERE apply_reply = ? ORDER BY apply_id DESC LIMIT ? OFFSET ?");
          $stmt->bind_param("iii", $i, $limit, $offset);

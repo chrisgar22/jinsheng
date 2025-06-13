@@ -2404,7 +2404,7 @@
 
                $.ajax({
                   type: "POST",
-                  url: "http://localhost/web202411/tegrand_member_control_api_v2.php?action=checkuni",
+                  url: "http://localhost/jinsheng_member_control_api_v2.php?action=checkuni",
                   data: JSON.stringify(JSONdata),
                   dataType: "json",
                   success: showdata_checkuni,
@@ -2688,7 +2688,7 @@
 
                $.ajax({
                   type: "POST",
-                  url: "http://localhost/web202411/tegrand_member_control_api_v2.php?action=register",
+                  url: "http://localhost/jinsheng_member_control_api_v2.php?action=checkuni",
                   data: JSON.stringify(JSONdata),
                   dataType: "json",
                   success: showdata_reg,
@@ -2769,8 +2769,8 @@
                console.log(JSON.stringify(JSONdata));
                $.ajax({
                   type: "POST",
-                  url: "http://localhost/web202411/tegrand_member_control_api_v2.php?action=login",
-                  data: JSON.stringify(JSONdata),
+                  url: "http://localhost/jinsheng_member_control_api_v2.php",
+                  data: JSONdata,
                   dataType: "json",
                   success: showdata_login,
                   error: function (xhr, status, error) {
@@ -2945,7 +2945,7 @@
 
                $.ajax({
                   type: "POST",
-                  url: "http://localhost/web202411/tegrand_apply_control_api.php?action=add",
+                  url: "http://localhost/jinsheng_member_control_api_v2.php?action=add",
                   data: JSON.stringify(JSONdata),
                   dataType: "json",
                   success: showdata_applyadd,
@@ -3031,7 +3031,7 @@
 
             $.ajax({
                type: "POST",
-               url: "http://localhost/web202411/tegrand_member_control_api_v2.php?action=checkuid",
+               url: "http://localhost/jinsheng_member_control_api_v2.php?action=checkuid",
                data: JSON.stringify(JSONdata),
                dataType: "json",
                success: showdata_checkuid,

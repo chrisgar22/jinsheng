@@ -501,7 +501,8 @@
             <div class="navbar-brand fw-900 d-flex align-items-center">
                <img class="navbar-brand-img" src="images/jinsheng.jpg" alt="勁聲汽車音響">
                <span class="navbar-brand-name ms-1">勁聲汽車音響</span>
-               <a class="nav-link ms-5 p-2 nav-link-icon" aria-current="page" href="jinsheng_project_v4.html" title="首頁">
+               <a class="nav-link ms-5 p-2 nav-link-icon" aria-current="page" href="jinsheng_project_v4.html"
+                  title="首頁">
                   <i class="s02-icon fa-solid fa-house fa-xl"></i>
                   <span class="s02-icon-span nav-link-span">
                      <b>首頁</b>
@@ -515,35 +516,155 @@
    <!-- section03 radio toggle -->
    <section id="s03" class="box03bg">
       <div class="container-fluid">
+         <!-- 分類選單 -->
          <div class="row">
-            <div class="btn-group my-3" role="group" aria-label="Basic radio toggle button group">
+            <div class="btn-group my-3" role="group" aria-label="商品分類">
                <input type="radio" class="btn-check" name="item" id="all" autocomplete="off" checked>
                <label class="btn s03-outline" for="all"><span class="h4"><b>所有機型</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="1" autocomplete="off">
-               <label class="btn s03-outline" for="1"><span class="h4"><b>二手安卓主機</b></span></label>
+               <label class="btn s03-outline" for="1"><span class="h4"><b>安卓主機</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="2" autocomplete="off">
-               <label class="btn s03-outline" for="2"><span class="h4"><b>二手喇叭</b></span></label>
+               <label class="btn s03-outline" for="2"><span class="h4"><b>喇叭</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="3" autocomplete="off">
-               <label class="btn s03-outline" for="3"><span class="h4"><b>二手擴大機</b></span></label>
+               <label class="btn s03-outline" for="3"><span class="h4"><b>重低音喇叭</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="4" autocomplete="off">
-               <label class="btn s03-outline" for="4"><span class="h4"><b>二手DSP</b></span></label>
+               <label class="btn s03-outline" for="4"><span class="h4"><b>DSP</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="5" autocomplete="off">
-               <label class="btn s03-outline" for="5"><span class="h4"><b>二手測速器</b></span></label>
+               <label class="btn s03-outline" for="5"><span class="h4"><b>測速器</b></span></label>
 
                <input type="radio" class="btn-check" name="item" id="6" autocomplete="off">
-               <label class="btn s03-outline" for="6"><span class="h4"><b>二手行車記錄器</b></span></label>
+               <label class="btn s03-outline" for="6"><span class="h4"><b>行車記錄器</b></span></label>
 
-               <input type="radio" class="btn-check" name="item" id="10" autocomplete="off">
-               <label class="btn s03-outline" for="10"><span class="h4"><b>新機代理</b></span></label>
+               <input type="radio" class="btn-check" name="item" id="7" autocomplete="off">
+               <label class="btn s03-outline" for="7"><span class="h4"><b>制震隔音</b></span></label>
+            </div>
+         </div>
+
+         <!-- 商品列表 -->
+         <div class="row" id="product-list">
+            <script>
+               const categories = [
+                  { id: 1, name: "安卓主機" },
+                  { id: 2, name: "喇叭" },
+                  { id: 3, name: "重低音喇叭" },
+                  { id: 4, name: "DSP" },
+                  { id: 5, name: "測速器" },
+                  { id: 6, name: "行車記錄器" },
+                  { id: 7, name: "制震隔音" }
+               ];
+
+               const availableImages = [
+                  "1-1.jpg", "1-2.jpg", "1-3.jpg", "1-4.jpg", "1-5.jpg", "1-6.jpg",
+                  "1-7.jpg", "1-8.jpg", "1-9.jpg", "1-10.jpg", "1-11.jpg", "2-1.jpg",
+                  "2-2.jpg", "2-3.jpg", "2-4.jpg", "2-5.jpg", "2-6.jpg", "2-7.jpg",
+                  "2-8.jpg", "2-9.jpg", "2-10.jpg", "2-11.jpg", "2-12.jpg", "2-13.jpg",
+                  "2-14.jpg", "3-1.jpg", "3-2.jpg", "3-3.jpg", "3-4.jpg", "3-5.jpg",
+                  "3-6.jpg", "3-7.jpg", "3-8.jpg", "3-9.jpg", "3-10.jpg", "3-11.jpg",
+                  "3-12.jpg", "3-13.jpg", "3-14.jpg", "4-1.jpg", "4-2.jpg", "4-3.jpg",
+                  "4-4.jpg", "4-5.jpg", "4-6.jpg", "4-7.jpg", "4-8.jpg", "4-9.jpg",
+                  "5-1.jpg", "5-2.jpg", "5-3.jpg", "5-4.jpg", "5-5.jpg", "6-1.jpg",
+                  "6-2.jpg", "6-3.jpg", "6-4.jpg", "6-5.jpg", "6-6.jpg", "6-7.jpg",
+                  "6-8.jpg", "6-9.jpg", "6-10.jpg", "6-11.jpg", "6-12.jpg", "6-13.jpg",
+                  "6-14.jpg", "6-15.jpg", "7-1.jpg", "7-2.jpg", "7-3.jpg", "7-4.jpg",
+                  "7-5.jpg", "7-6.jpg", "7-7.jpg", "7-8.jpg", "7-9.jpg", "7-10.jpg",
+               ];
+
+               const productData = {
+                  "1-1.jpg": 26900, "1-2.jpg": 28900, "1-3.jpg": 29500, "1-4.jpg": 26000,
+                  "1-5.jpg": 23800, "1-6.jpg": 26000, "1-7.jpg": 25800, "1-8.jpg": 12500,
+                  "1-9.jpg": 45900, "1-10.jpg": 23888, "1-11.jpg": 24800,
+                  "2-1.jpg": 15000, "2-2.jpg": 42000, "2-3.jpg": 6000, "2-4.jpg": 13000,
+                  "2-5.jpg": 31000, "2-6.jpg": 21000, "2-7.jpg": 26500, "2-8.jpg": 27800,
+                  "2-9.jpg": 16500, "2-10.jpg": 8000, "2-11.jpg": 16500, "2-12.jpg": 6800,
+                  "2-13.jpg": 4200, "2-14.jpg": 18000,
+                  "3-1.jpg": 21800, "3-2.jpg": 18000, "3-3.jpg": 26800, "3-4.jpg": 13800,
+                  "3-5.jpg": 7800, "3-6.jpg": 25800, "3-7.jpg": 11600, "3-8.jpg": 8900,
+                  "3-9.jpg": 10500, "3-10.jpg": 9800, "3-11.jpg": 9800, "3-12.jpg": 14500,
+                  "3-13.jpg": 8500, "3-14.jpg": 19000, "3-15.jpg": 18500,
+                  "4-1.jpg": 58000, "4-2.jpg": 56800, "4-3.jpg": 28500, "4-4.jpg": 15800,
+                  "4-5.jpg": 32000, "4-6.jpg": 7500, "4-7.jpg": 39500, "4-8.jpg": 49500,
+                  "4-9.jpg": 15800,
+                  "5-1.jpg": 12800, "5-2.jpg": 10800, "5-3.jpg": 19800, "5-4.jpg": 9988,
+                  "5-5.jpg": 8888,
+                  "6-1.jpg": 13800, "6-2.jpg": 11990, "6-3.jpg": 15800, "6-4.jpg": 14498,
+                  "6-5.jpg": 13800, "6-6.jpg": 22800, "6-7.jpg": 15800, "6-8.jpg": 7500,
+                  "6-9.jpg": 7980, "6-10.jpg": 6990, "6-11.jpg": 12800, "6-12.jpg": 9900,
+                  "6-13.jpg": 7990, "6-14.jpg": 12900, "6-15.jpg": 12800,
+                  "7-1.jpg": 2000, "7-2.jpg": 2000, "7-3.jpg": 800, "7-4.jpg": 22000,
+                  "7-5.jpg": 20000, "7-6.jpg": 2800,
+               };
+
+               const container = document.currentScript.parentElement;
+
+               availableImages.forEach(filename => {
+                  const [catIdStr] = filename.replace('.jpg', '').split('-');
+                  const catId = parseInt(catIdStr);
+                  const category = categories.find(c => c.id === catId);
+                  if (!category) return;
+
+                  const price = productData[filename] ?? 0; // 預設價格 0
+                  const displayPrice = price > 0 ? `NT$ ${price}` : "請洽詢";
+
+                  const item = document.createElement('div');
+                  item.className = 'col-md-3 mb-3';
+                  item.setAttribute('data-category', catId);
+
+                  const imageUrl = `images/products/${filename}`;
+                  item.innerHTML = `
+      <div class="card h-100">
+        <img src="${imageUrl}" class="card-img-top" alt="${category.name} 商品">
+        <div class="card-body">
+          <h5 class="card-title">${category.name}</h5>
+          <p class="card-text">價格：<span class="price">${displayPrice}</span></p>
+          <button class="btn btn-primary add-to-cart" data-name="${category.name}" data-price="${price}">加入購物車</button>
+        </div>
+      </div>
+    `;
+                  container.appendChild(item);
+               });
+            </script>
+
+         </div>
+
+         <!-- 總金額 -->
+         <div class="row mt-4">
+            <div class="col">
+               <h4>🛒 購物車總金額：<span id="total-price">NT$ 0</span></h4>
             </div>
          </div>
       </div>
    </section>
+
+   <script>
+      let total = 0;
+      document.addEventListener('click', function (e) {
+         if (e.target.classList.contains('add-to-cart')) {
+            const price = parseInt(e.target.getAttribute('data-price'));
+            total += price;
+            document.getElementById('total-price').textContent = `NT$ ${total.toLocaleString()}`;
+         }
+      });
+
+      document.querySelectorAll('input[name="item"]').forEach(radio => {
+         radio.addEventListener('change', function () {
+            const selected = this.id;
+            document.querySelectorAll('#product-list > div').forEach(product => {
+               const category = product.getAttribute('data-category');
+               if (selected === 'all' || selected === category) {
+                  product.style.display = 'block';
+               } else {
+                  product.style.display = 'none';
+               }
+            });
+         });
+      });
+   </script>
+
 
    <!-- section04 cards maximizable -->
    <section id="s04" class="box03bg">
@@ -600,8 +721,8 @@
                <a class="nav-link disabled" style="color: white;">114年跨平台網站設置與應用班第1期7號趙琦福</a>
             </li>
             <li class="nav-item">
-               <a href="https://tw.bid.yahoo.com/search/auction/product?p=%E5%8B%81%E8%81%B2" class="nav-link active" aria-current="page" target="_blank"
-                  style="color: white" rel="noopener noreferrer">雅虎奇摩-勁聲汽車音響</a>
+               <a href="https://tw.bid.yahoo.com/search/auction/product?p=%E5%8B%81%E8%81%B2" class="nav-link active"
+                  aria-current="page" target="_blank" style="color: white" rel="noopener noreferrer">雅虎奇摩-勁聲汽車音響</a>
             </li>
          </ul>
       </div>
@@ -836,21 +957,21 @@
 
             // 取得相對應類別的資料
             let filteredItems;
-            if(selectedCategory === "all"){
+            if (selectedCategory === "all") {
                // 當選擇「所有機型」時，顯示所有機台資料
                filteredItems = [].concat(...Object.values(itemsByCategory)); // 將所有類別的資料合併為一個陣列
-            }else{
+            } else {
                // 檢查是否有對應類別的資料
                filteredItems = itemsByCategory[selectedCategory] || [];
             }
 
-            if(filteredItems.length === 0){
+            if (filteredItems.length === 0) {
                console.log("沒有符合條件的資料");
 
                // 獲取被選中的 label 的文字
                let selectedLabel = $("label[for='" + selectedCategory + "']").text().trim();
                Swal.fire("提示", `<span style="color: red; font-weight: bold;">${selectedLabel} 目前無機台庫存</span>`, "info");
-            }else{
+            } else {
                console.log("篩選後的資料：", filteredItems);
 
                // 清空之前的卡片

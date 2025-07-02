@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>勁聲汽車音響-購物車</title>
+   <title>勁聲汽車音響-購物車清單</title>
    <link rel="stylesheet" href="css/bootstrap.min.css" />
    <link rel="stylesheet" href="css/mycolor-tegrand.css" />
    <link rel="stylesheet" href="css/all.min.css" />
@@ -300,6 +300,55 @@
          }
       }
    </style>
+
+<script>
+function renderCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartItemsContainer = document.getElementById("cart-items");
+  cartItemsContainer.innerHTML = ""; // 清空
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+    const div = document.createElement("div");
+    div.className = "cart-item flex flex-col md:flex-row items-center justify-between border-b pb-6 px-4 bg-gray-50 rounded-lg p-4 shadow-sm";
+    div.innerHTML = `
+      <div class="w-full md:w-[15%] flex justify-center">
+        <img src="${item.img}" class="w-20 h-20 rounded-lg shadow-md" />
+      </div>
+      <div class="w-full md:w-[25%]">
+        <h2 class="text-lg font-semibold text-gray-700">${item.brand}</h2>
+        <h2 class="text-lg font-semibold text-gray-700">${item.name}</h2>
+        <h2 class="text-lg font-semibold text-gray-700">${item.type}</h2>
+      </div>
+      <div class="w-full md:w-[10%] text-center">
+        <p class="text-lg font-bold text-gray-700">${item.price.toLocaleString()} 元</p>
+      </div>
+      <div class="w-full md:w-[35%]">
+        <textarea class="w-full p-2 border border-gray-300 rounded-lg resize-none" placeholder="請填寫備註"></textarea>
+      </div>
+      <div class="w-full md:w-[10%] flex justify-center">
+        <button class="remove btn btn-danger" data-index="${index}">移除</button>
+      </div>`;
+    cartItemsContainer.appendChild(div);
+  });
+
+  document.getElementById("total-price").textContent = total.toLocaleString() + " 元";
+}
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("remove")) {
+    const index = e.target.dataset.index;
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", renderCart);
+</script>
+
 </head>
 
 <body oncontextmenu="window.event.returnValue=false">
@@ -372,7 +421,7 @@
       </nav>
    </section>
 
-   <!-- 購機內容 -->
+   <!-- 購物內容 -->
    <div class="container-fluid boxbg">
       <section id="s03" class="p-6">
          <div class="max-w-7xl mx-auto p-6 rounded-lg shadow-lg">
@@ -595,8 +644,8 @@
       <i class="fa-solid fa-user fa-lg"></i>
    </button>
 
-   <!-- 查看機臺清單 -->
-   <button class="" id="moreitem" title="查看機臺頁面">
+   <!-- 查看產品清單 -->
+   <button class="" id="moreitem" title="查看產品頁面">
       <i class="fa-regular fa-rectangle-list"></i>
    </button>
 

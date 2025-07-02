@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>勁聲汽車音響-二手機</title>
+   <title>勁聲汽車音響-購物車</title>
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/mycolor-tegrand.css">
    <link rel="stylesheet" href="css/all.min.css">
@@ -437,6 +437,22 @@
          }
       }
    </style>
+
+<script>
+function addToCart(img, brand, name, type, price) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({
+    img: img,
+    brand: brand,
+    name: name,
+    type: type,
+    price: parseInt(price)
+  });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("商品已加入購物車");
+}
+</script>
+
 </head>
 
 <body oncontextmenu="window.event.returnValue=false">
@@ -670,45 +686,6 @@
    <section id="s04" class="box03bg">
       <div class="container-fluid">
          <div class="row" id="item-card">
-            <!-- <div class="col-md-3 mb-3">
-               <div class="card card-title-color">
-                  <div class="card-header">
-                     <h3 class="card-title">Maximizable</h3>
-                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-lte-toggle="card-maximize"><i
-                              data-lte-icon="maximize" class="bi bi-fullscreen"></i><i data-lte-icon="minimize"
-                              class="bi bi-fullscreen-exit"></i></button>
-                     </div>
-                  </div>
-                  <div class="card-body">
-                     <div class="card-body-left text-center">
-                        <img class="card-body-img" src="images/MajorProject/item/10-新機代理/世合MR-450plus自動送料CNC加工機.jpg">
-                        <button class="btn btn-primary mt-3">加入購物車</button>
-                     </div>
-                     <div class="card-body-text">
-                        <div class="h4 text-center"><b>世合MR-450plus自動送料CNC加工機</b></div>
-                        <p>型號: MR-450plus</p>
-                        <p>售價:<span class="mx-1 h4 text-danger"><b>2萬</b></span>元</p>
-                        <p>主軸鼻端至工作台距離: 180mm</p>
-                        <p>主軸中心至滑道面距離: 417mm</p>
-                        <p>工作台尺寸: 500x350mm</p>
-                        <p>T型槽尺寸: 18x3x100(寬x槽數x間距)</p>
-                        <p>工作台最大荷重: 150kgs</p>
-                        <p>主軸轉速: 12,000rpm (直結式)</p>
-                        <p>主軸馬達: 3.7/5.5kw</p>
-                        <p>BT30/14ATC</p>
-                        <p>最大刀徑 鄰刀/空鄰刀: ø90/ø150mm</p>
-                        <p>最大刀具長度: 200mm</p>
-                        <p>佔地面積: 2125x1500x2470mm (長x寬x高)</p>
-                        <p>機械重量: 2600kgs</p>
-                        <p>6軸8公斤機械手能力:</p>
-                        <p>1.可夾持重量: 4(2+2)kgs</p>
-                        <p>2.最大有效範圍半徑: 908mm</p>
-                        <p>3.週期時間: 0.35/300 sec/mm</p>
-                     </div>
-                  </div>
-               </div>
-            </div> -->
          </div>
       </div>
    </section>

@@ -438,20 +438,27 @@
       }
    </style>
 
-<script>
-function addToCart(img, brand, name, type, price) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push({
-    img: img,
-    brand: brand,
-    name: name,
-    type: type,
-    price: parseInt(price)
-  });
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert("商品已加入購物車");
-}
-</script>
+   <script>
+      document.addEventListener('click', function (e) {
+         if (e.target.classList.contains('add-to-cart')) {
+            const productName = e.target.getAttribute('data-name');
+            const productPrice = e.target.getAttribute('data-price');
+            const productImage = e.target.closest('.card').querySelector('.card-img-top').src;
+
+            // 儲存到 localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({
+               name: productName,
+               price: parseInt(productPrice),
+               image: productImage,
+            });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            alert(`${productName} 已加入購物車`);
+         }
+      });
+
+   </script>
 
 </head>
 
@@ -863,7 +870,7 @@ function addToCart(img, brand, name, type, price) {
             //顯示登出按鈕
             $("#s01_logout_btn").removeClass("d-none");
 
-            // 顯示控制台、會員系統、購物車、收購機台填入資訊、聯絡得昌行按鈕
+            // 顯示控制台、會員系統、購物車、收購填入資訊、聯絡按鈕
             let userRole = parseInt(data.data.role, 10);
             if (userRole === 0) {
                $("#controlPanel").removeClass("d-none");

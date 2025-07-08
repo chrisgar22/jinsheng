@@ -628,7 +628,8 @@
       #s08 {
          background-image: url(images/jinsheng11.jpg);
          background-size: cover;
-         background-position: center;
+         background-position: center center;
+         /* 讓圖片在中心顯示 */
          background-repeat: no-repeat;
          background-attachment: fixed;
          position: relative;
@@ -643,15 +644,21 @@
          width: 100%;
          height: 100%;
          background-color: rgba(255, 255, 255, 0.4);
+         /* 半透明遮罩 */
          z-index: -1;
       }
 
       /* s08卡片翻轉 */
       .flip-card {
          background-color: transparent;
-         width: 280px;
-         height: 280px;
+         width: 100%;
+         /* 讓卡片寬度適應容器 */
+         max-width: 350px;
+         /* 設定卡片的最大寬度 */
+         height: 350px;
+         /* 設定卡片高度 */
          perspective: 1000px;
+         margin: 10px;
       }
 
       .flip-card-inner {
@@ -682,6 +689,7 @@
 
       .flip-card:hover .flip-card-inner {
          transform: rotateY(180deg);
+         /* 滑鼠懸停時翻轉卡片180度 */
       }
 
       .flip-card-front,
@@ -697,6 +705,7 @@
          background-color: #073760;
          color: white;
          transform: rotateY(180deg);
+         /* 背面顯示時翻轉180度 */
       }
 
       .flip-card-back hr {
@@ -720,6 +729,29 @@
          height: 100%;
          line-height: 1.5;
          padding: 1px;
+      }
+
+      /* 響應式設計 */
+      @media (max-width: 1200px) {
+         .flip-card {
+            width: 250px;
+            /* 在較小螢幕上調整卡片寬度 */
+            height: 300px;
+            /* 調整卡片高度 */
+         }
+      }
+
+      @media (max-width: 768px) {
+         .flip-card {
+            width: 200px;
+            /* 在手機上進一步縮小卡片 */
+            height: 250px;
+         }
+
+         .s08q h3 {
+            font-size: 18px;
+            /* 在小螢幕上調整標題字體 */
+         }
       }
 
       /* s09 */
@@ -1107,7 +1139,6 @@
             display: none;
          }
       }
-
    </style>
 </head>
 
@@ -1326,8 +1357,7 @@
                <ul class="navbar-nav w-100 d-flex justify-content-around mb-2 mb-lg-0">
                   <!-- 首頁 -->
                   <li class="nav-item active ms-1">
-                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="index.html"
-                        title="首頁">
+                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="index.html" title="首頁">
                         <i class="s02-icon fa-solid fa-house fa-2xl"></i>
                         <span class="s02-icon-span nav-link-span">
                            <b>首頁</b>
@@ -1725,7 +1755,8 @@
          <div class="card04 s05card" style="height: auto;">
             <div class="display-4 fw-900 text-center" style="color: #073760;">購機服務</div>
             <div class="row d-flex justify-content-between">
-               <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
+               <!-- 需求諮詢卡片 -->
+               <div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3 d-flex justify-content-center align-items-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
                         <div class="flip-card-front bg-cover" style="background-image: url(images/buy01.jpg);">
@@ -1735,21 +1766,18 @@
                         </div>
                         <div class="flip-card-back rounded-5">
                            <ul>
-                              <li>
-                                 了解車主的使用習慣（音樂類型、音量需求、音質偏好）。
-                              </li>
+                              <li>了解車主的使用習慣（音樂類型、音量需求、音質偏好）。</li>
                            </ul>
                            <hr>
                            <ul>
-                              <li>
-                                 探討車款限制與預算範圍及建議合適的音響配置方向。
-                              </li>
+                              <li>探討車款限制與預算範圍及建議合適的音響配置方向。</li>
                            </ul>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
+               <!-- 產品選購卡片 -->
+               <div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3 d-flex justify-content-center align-items-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
                         <div class="flip-card-front bg-cover" style="background-image: url(images/buy02.jpg);">
@@ -1759,21 +1787,18 @@
                         </div>
                         <div class="flip-card-back rounded-5">
                            <ul>
-                              <li>
-                                 根據需求推薦適合的品牌與型號。
-                              </li>
+                              <li>根據需求推薦適合的品牌與型號。</li>
                            </ul>
                            <hr>
                            <ul>
-                              <li>
-                                 比較不同產品功能、音質表現與價格性價比。
-                              </li>
+                              <li>比較不同產品功能、音質表現與價格性價比。</li>
                            </ul>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
+               <!-- 專業安裝卡片 -->
+               <div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3 d-flex justify-content-center align-items-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
                         <div class="flip-card-front bg-cover" style="background-image: url(images/buy03.jpg);">
@@ -1783,21 +1808,18 @@
                         </div>
                         <div class="flip-card-back rounded-5">
                            <ul>
-                              <li>
-                                 安排技師進行走線、安裝與固定。
-                              </li>
+                              <li>安排技師進行走線、安裝與固定。</li>
                            </ul>
                            <hr>
                            <ul>
-                              <li>
-                                 初步測試功能與接線完整性，確保運作正常並注意車內空間利用與視覺整合。
-                              </li>
+                              <li>初步測試功能與接線完整性，確保運作正常並注意車內空間利用與視覺整合。</li>
                            </ul>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-3 col-lg-6 mt-3 d-flex justify-content-center align-items-xl-center">
+               <!-- 驗收教學卡片 -->
+               <div class="col-xl-3 col-lg-6 col-md-6 col-12 mt-3 d-flex justify-content-center align-items-center">
                   <div class="flip-card">
                      <div class="flip-card-inner rounded-5">
                         <div class="flip-card-front bg-cover" style="background-image: url(images/buy04.jpg);">
@@ -1807,15 +1829,11 @@
                         </div>
                         <div class="flip-card-back rounded-5">
                            <ul>
-                              <li>
-                                 協助車主熟悉操作介面與功能調整方式。
-                              </li>
+                              <li>協助車主熟悉操作介面與功能調整方式。</li>
                            </ul>
                            <hr>
                            <ul>
-                              <li>
-                                 提供升級建議與安裝紀錄，以利日後維修或升級服務。
-                              </li>
+                              <li>提供升級建議與安裝紀錄，以利日後維修或升級服務。</li>
                            </ul>
                         </div>
                      </div>
@@ -1825,6 +1843,7 @@
          </div>
       </div>
    </section>
+
    <section id="s09">
       <div class="container-fluid py-1">
          <div class="card04 s05card" style="min-height: 450px">

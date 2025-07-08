@@ -1123,6 +1123,18 @@
             /* 各社群圖示在手機版縮小 */
          }
       }
+
+      @media (max-width: 768px) {
+
+         #s01_reg_btn_1,
+         #s01_login_btn_1,
+         #s01_logout_btn {
+            font-size: 14px;
+            /* 手機版進一步縮小字型 */
+            padding: 5px 12px;
+            /* 調整按鈕內邊距 */
+         }
+      }
    </style>
 </head>
 
@@ -1171,11 +1183,11 @@
                <span class="me-3 s01-span d-none" id="s01_username_showspan">
                   <b><span id="s01_username_span"></span>，您好!</b>
                </span>
-               <button class="btn btn-lg btn-outline-warning me-4" data-bs-toggle="modal"
+               <button class="btn btn-lg btn-outline-warning me-2" data-bs-toggle="modal"
                   data-bs-target="#registerModal" id="s01_reg_btn_1">註冊</button>
                <button class="btn btn-lg btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#loginModal"
                   id="s01_login_btn_1">登入</button>
-               <button class="btn btn-lg btn-outline-danger me-4 d-none" id="s01_logout_btn">登出</button>
+               <button class="btn btn-lg btn-outline-danger me-2 d-none" id="s01_logout_btn">登出</button>
             </div>
          </div>
       </div>

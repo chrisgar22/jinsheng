@@ -156,6 +156,17 @@
          font-size: 15px;
       }
 
+      /* 調整註冊、登入和登出按鈕的大小 */
+      #s01_reg_btn_1,
+      #s01_login_btn_1,
+      #s01_logout_btn {
+         font-size: 14px;
+         /* 調整字型大小 */
+         padding: 5px 12px;
+         /* 減少內邊距，讓按鈕變小 */
+      }
+
+
       /* s02 */
       .navbar {
          background-color: #073760;
@@ -167,7 +178,7 @@
       }
 
       .navbar-brand-name {
-         font-size: 40px;
+         font-size: 50px;
          color: white;
       }
 
@@ -182,7 +193,7 @@
 
       .s02-icon-span {
          color: white;
-         font-size: 15px;
+         font-size: 30px;
       }
 
       .s02-icon-dropdown {
@@ -192,7 +203,7 @@
 
       .s02-icon-dropdown-span {
          color: v#073760;
-         font-size: 30px;
+         font-size: 0px;
       }
 
       /* section02 banner按鍵動作 */
@@ -1107,34 +1118,6 @@
             display: none;
          }
       }
-
-      /* 手機版圖示大小 */
-      @media (max-width: 768px) {
-         .s01-icon {
-            font-size: 25px;
-            /* 手機版縮小 */
-         }
-
-         .s01-icon-fb,
-         .s01-icon-line,
-         .s01-icon-ig,
-         .s01-icon-threads {
-            font-size: 30px;
-            /* 各社群圖示在手機版縮小 */
-         }
-      }
-
-      @media (max-width: 768px) {
-
-         #s01_reg_btn_1,
-         #s01_login_btn_1,
-         #s01_logout_btn {
-            font-size: 14px;
-            /* 手機版進一步縮小字型 */
-            padding: 5px 12px;
-            /* 調整按鈕內邊距 */
-         }
-      }
    </style>
 </head>
 
@@ -1353,8 +1336,7 @@
                <ul class="navbar-nav w-100 d-flex justify-content-around mb-2 mb-lg-0">
                   <!-- 首頁 -->
                   <li class="nav-item active ms-1">
-                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="jinsheng_project_v4.html"
-                        title="首頁">
+                     <a class="nav-link p-4 nav-link-icon" aria-current="page" href="index.html" title="首頁">
                         <i class="s02-icon fa-solid fa-house fa-2xl"></i>
                         <span class="s02-icon-span nav-link-span">
                            <b>首頁</b>
@@ -1410,14 +1392,6 @@
                               <i class="s02-icon-dropdown fa-solid fa-truck-monster" title="隔音制震"></i>
                               <span class="s02-icon-dropdown-span">
                                  <b>隔音制震</b>
-                              </span>
-                           </a>
-                        </li>
-                        <li>
-                           <a class="dropdown-item" href="#s08">
-                              <i class="s02-icon-dropdown fa-solid fa-car-side" title="盲點偵測"></i>
-                              <span class="s02-icon-dropdown-span">
-                                 <b>盲點偵測</b>
                               </span>
                            </a>
                         </li>
@@ -1539,7 +1513,7 @@
                   </div>
                </div>
                <hr class="s04hr">
-               <!-- 營業項目 -->
+               營業項目
                <div class="col-3 col-lg-2 bg-cover mt-3 mt-lg-0">
                   <img src="images/MajorProject/serviceitem.png" alt="" style="width: 100%;border-radius: 50%;">
                </div>
@@ -1549,7 +1523,6 @@
                      <div class="s04-item">影音多媒體</div>
                      <div class="s04-item">3D 360環景系統</div>
                      <div class="s04-item">隔音制震</div>
-                     <div class="s04-item">盲點偵測</div>
                      <div class="s04-item">行車記錄器</div>
                      <div class="s04-item">測速器</div>
                   </div>
